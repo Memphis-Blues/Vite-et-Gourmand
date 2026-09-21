@@ -19,6 +19,23 @@
         {% endif %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <h1>Vite & Gourmand</h1>
+        {% block principal %}{% endblock %}
+        <footer>
+        <h2>Plan du site</h2>
+        <nav aria-label="Plan du site">
+        <ul>
+            <li><a href="/">Page d'accueil</a></li>
+        </ul>
+        </nav>
+        <h2>Horaires</h2>
+        <ul>
+        {% for creneau in creneaux %}
+        <li>
+        {{creneau.jour}} {{creneau.heureOuverture}}-{{creneau.heureFermeture}}
+        </li>
+        {% endfor %}
+        </ul>
+        </footer>
     </body>
 </html>
