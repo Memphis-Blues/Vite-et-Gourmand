@@ -1,3 +1,27 @@
 body {
-    background-color: skyblue;
+    margin: 0rem;
+    padding: 0rem;
 }
+footer {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+footer a {
+    color: pink;
+}
+footer ul {
+  list-style-type: none;
+}
+#principal {
+    padding: 3rem;
+    max-width: 45rem;
+    margin: auto;
+}
+.flexline {
+    display: flex;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
