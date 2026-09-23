@@ -18,5 +18,24 @@ class AccueilControleur extends AbstractController
            'creneaux' => $horaires
         ]);
     }
+
+    #[Route('MentionsLegales')]
+    public function ml(EntityManagerInterface $entityManager): Response
+    {
+        $horaires = $entityManager->getRepository(HoraireEntity::class)->findAll();
+        return $this->render('MentionsLegales.html.twig', [
+            'creneaux' => $horaires
+        ]);
+    }
+
+    #[Route('CGV')]
+    public function cgv(EntityManagerInterface $entityManager): Response
+    {
+        $horaires = $entityManager->getRepository(HoraireEntity::class)->findAll();
+        return $this->render('CGV.html.twig', [
+            'creneaux' => $horaires
+        ]);
+    }
 }
+
 
